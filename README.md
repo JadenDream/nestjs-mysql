@@ -6,6 +6,15 @@
 
 一個 nest js 運用 typeorm （mysql）的例子
 
+## Installation
+
+第一次下載運行時需要先安裝更新
+(需要預先安裝 nest cli : [https://docs.nestjs.cn/6/cli?id=cli])
+
+```bash
+$ nest u
+```
+
 ## Running the app
 
 ```bash
