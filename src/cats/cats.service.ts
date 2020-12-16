@@ -18,4 +18,8 @@ export class CatsService {
 	async findAll(): Promise<Cat[]> {
 		return this.catRepository.find();
 	}
+	
+	async findbyID(id: number): Promise<Cat> {
+		return await this.catRepository.findOne(id);
+	}
 }
