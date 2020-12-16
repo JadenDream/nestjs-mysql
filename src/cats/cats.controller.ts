@@ -3,6 +3,7 @@ import { CreateCatDto } from './dto/create-cat.dto';
 import { Cat } from './entities/cat.entity';
 import { CatsService } from './cats.service';
 import { ValidatePipe } from '../validate.pipe';
+import { ParseIntPipe } from '../parse-int.pipe';
 
 @Controller('cats')
 export class CatsController {
@@ -27,8 +28,8 @@ export class CatsController {
 	}
 	
 	@Get(':id')
-	findOne(@Param() params): Promise<Cat> {
-	  const tCat = this.catsService.findbyID(params.id);
+	findOne(@Param('id', new ParseIntPipe()) id): Promise<Cat> {
+	  const tCat = this.catsService.findbyID(id);
 	  return tCat;
 	}
 }
