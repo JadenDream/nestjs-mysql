@@ -7,9 +7,9 @@ export class CreateCatDto {
 	@IsInt()
     age: number;
 	
-	@IsString()
+	@IsString( { each: true } )
     color: string;
 	
-	@IsBoolean()
+	@IsBoolean( { each: true } )
 	isActive: boolean
 }
